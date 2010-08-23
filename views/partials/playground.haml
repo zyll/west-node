@@ -1,0 +1,8 @@
+%p
+  %table
+    :for i, k in playground.range[0]
+      %tr 
+        :for j, l in playground.range[1]
+          %td{style: "border: 1px black solid;"}
+            :if playground.at([i, j]) != null
+              = playground.at([i, j]).name

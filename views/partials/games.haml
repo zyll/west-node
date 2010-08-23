@@ -1,0 +1,7 @@
+%title Games
+%ul
+  :each game in games
+    %li
+      %a{href: "/game/"+game.name}= game.name
+%div
+  %a{href:"/game"} create

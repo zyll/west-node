@@ -1,0 +1,23 @@
+%title  New Game
+%form{action: "game", method:"post"}
+  %fieldset
+    %legend game
+    %p
+      %label Name :
+        %input{type: "text", name: "name"}
+  %fieldset
+    %legend playground
+    %p
+      %label size :
+        %input{type: "text", name: "playground[size][0]"}
+        %input{type: "text", name: "playground[size][1]"}
+  %fieldset
+    %legend players
+    %p
+      %label 1 :
+        %input{type: "text", name: "player[0]"}
+    %p
+      %label 2 :
+        %input{type: "text", name: "player[1]"}
+  %p
+    %input{type: "submit", value: "créer"}

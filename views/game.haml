@@ -1,0 +1,16 @@
+%title Game
+%h1= game.name
+  %div
+    %h2 playground
+    %p= "size : " + game.playground.size[0] + ", " + game.playground.size[1]
+    %p= partial('playground', [game.playground])
+    %h2 "players"
+    %p
+      %ul
+        :each player in game.players
+          %li
+            %a{href: "/player/"+player.name}=player.name
+            :if game.turn_owner == player
+              %a{href: "/play/game/"+game.name+"/player/"+player.name} play
+    :if game.turn_owner == null
+      %a{href: "/play/game/"+game.name+"/start"} start game
